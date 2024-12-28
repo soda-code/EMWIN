@@ -1,0 +1,295 @@
+<html>
+<head>
+<title>emWin - Trial version</title>
+</head>
+
+<style>
+ H1, H2, H3 { color: blue }
+ H1, H2, H3 { font-family: Helvetica;}
+ PRE {  color: black;  margin-left: 2%; }
+ BODY { color: black;  margin-left: 2%; font-family: Verdana; font-size=75%}
+ TABLE{ color: black;  font-family: Verdana; font-size=100%}
+</style>
+<body bgcolor="#FFFFFF">
+
+<!-------------------------------------------------------------------------->
+<!-- Contents                                                             -->
+<!-------------------------------------------------------------------------->
+<h1><font size=+3><b><i>emWin</i></b></font> - Trial version</h1>
+<OL>
+  <LI><A HREF="#1">Introduction</A> </LI>
+  <LI><A HREF="#2">Requirements</A> </LI>
+  <LI><A HREF="#3">List of files</A> </LI>
+  <LI><A HREF="#4">Rebuilding the project</A> </LI>
+  <LI><A HREF="#5">Debugging the application</A> </LI>
+  <LI><A HREF="#6">Modifying the application</A> </LI>
+  <LI><A HREF="#7">Samples</A> </LI>
+</OL>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Introduction                                                         -->
+<!-------------------------------------------------------------------------->
+<h2><a name="1">Introduction</a></h2>
+This trial version allows you to evaluate all functions of <font size=+1><b><i>emWin</i></b></font>. It contains a fully-featured library including the following:<br>
+<OL>
+  <LI>Window manager</LI>
+  <LI>Memory devices</LI>
+  <LI>Antialiasing</LI>
+  <LI>Widget library</LI>
+  <LI>Touch panel support</LI>
+</OL>
+It also contains the following tools:<br>
+<OL>
+  <LI>The <font size=+1><b><i>emWin</i></b></font> - viewer: A useful tool to step through the simulation.</LI>
+  <LI>A demo version of the font converter.</LI>
+  <LI>A demo version of the bitmap converter.</LI>
+</OL>
+You need Microsoft Visual Studio (V 2019 or later) to be able to rebuild the project.<br><br>
+Please note that this trial version contains a precompiled emWin library. This implicates that preprocessor dependend configuration options can not be changed.
+With other words changes in the files LCDConf.h or GUIConf.h take no effect on the library. They should not be changed.<br><br>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Requirements                                                         -->
+<!-------------------------------------------------------------------------->
+<h2><a name="2">Requirements</a></h2>
+<OL>
+  <LI>Windows 7 or later</LI>
+  <LI>Microsoft Visual Studio 2019 or later</LI>
+</OL>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- List of files                                                        -->
+<!-------------------------------------------------------------------------->
+<h2><a name="3">List of files</a></h2>
+The trial version contains the following files:<br>
+  <table>
+    <tr>
+      <td width=50% HEIGHT="30"><B>Folder\File(s)</td>
+      <td width=50%><B>Explanation</td>
+    </tr>
+    <tr>
+      <td>Application\*.h, *.c</td>
+      <td>Source of the demo program</td>
+    </tr>
+    <tr>
+      <td>Config\*.h, *.c</td>
+      <td>Configuration files used to build the trial library.</td>
+    </tr>
+    <tr>
+      <td>Exe\GUISimulation.exe</td>
+      <td>Ready to use demo program</td>
+    </tr>
+    <tr>
+      <td>GUI\Include\*.h</td>
+      <td>Include files needed to use the library</td>
+    </tr>
+    <tr>
+      <td>GUI\Library\GUI.lib</td>
+      <td>GUI-library for Microsoft Visual Studio 2019 or later or later</td>
+    </tr>
+    <tr>
+      <td>Sample\*.c</td>
+      <td>Source code of the samples</td>
+    </tr>
+    <tr>
+      <td>Simulation\*.*</td>
+      <td>Simulation library, ressources and SIM_X.c</td>
+    </tr>
+    <tr>
+      <td>Tool\BmpCvtDemo_VXXX_Install.exe</td>
+      <td>Demo version of the emWin Bitmap converter</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinView.exe</td>
+      <td>emWin Viewer, used for debugging the application</td>
+    </tr>
+    <tr>
+      <td>Tool\FontCvtDemo.exe</td>
+      <td>Demo version of the font converter</td>
+    </tr>
+    <tr>
+      <td>Tool\emVNC.exe</td>
+      <td>Segger VNC client to be used to view and to control the application from a different system</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinPlayer.exe</td>
+      <td>Player for emWin Movie Files (*.emf).</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinSPY.exe</td>
+      <td>Tool to be used to show runtime information of the embedded target on a PC</td>
+    </tr>
+    <tr>
+      <td>CleanUp.bat</td>
+      <td>Removes the compiler output</td>
+    </tr>
+    <tr>
+      <td>ReadMe.html</td>
+      <td>This file</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.sln</td>
+      <td>Workspace file for Visual Studio 2019 or later</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.vcxproj</td>
+      <td>Project file for Visual Studio 2019 or later</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.vcxproj.filters</td>
+      <td>Project filters file for Visual Studio 2019 or later</td>
+    </tr>
+  </table>
+<br>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Rebuilding the project                                               -->
+<!-------------------------------------------------------------------------->
+<h2><a name="4">Rebuilding the project</a></h2>
+Please note that the configuration can be changed in the files LCDConf.c, GUIConf.h and SIMConf.c. Please do not change the files LCDConf.h and GUIConf.h. It takes no effect on the precompiled library.
+Changes in the configuration files take only effect if rebuilding the library.<br><br>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using Microsoft Visual Studio</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Copy all files to your hard drive.</li>
+  <li>Make sure Visual C++ V6.0 or later is installed.</li>
+  <li>Open the project by double-clicking the workspace.</li>
+  <li>Press <FONT FACE="Courier New"><B>F7</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>F5</B></FONT> to start the simulation.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Debugging the application                                            -->
+<!-------------------------------------------------------------------------->
+<h2><a name="5">Debugging the application</a></h2>
+<ol>
+  <li>Start the viewer by double-clicking emWinView.exe.</li>
+  <li>Step through the application. The viewer shows the contents of the LCD-display.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Modifying the application                                            -->
+<!-------------------------------------------------------------------------->
+<h2><a name="6">Modifying the application</a></h2>
+Feel free to change the demo program. You can modify the source files of the demo program and add or delete files to/from the project.<br><br>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using Microsoft Visual Studio</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Edit the source code or modify the project by adding or deleting files.</li>
+  <li>Press <FONT FACE="Courier New"><B>F7</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>F5</B></FONT> to start the simulation.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Samples                                                              -->
+<!-------------------------------------------------------------------------->
+
+<!-- Applicaton samples -->
+
+<h2><a name="7">Examples</a></h2>
+  <table>
+    <tr>
+      <td><BR><B>Analog Clock</B>
+      <BR>Shows a clock with retro look using animations to animate the hands.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\AnalogClock_390x390>Sample\Application\AnalogClock_390x390\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Bouncing balls</B>
+      <BR>Bouncing ball demo playing with elastic impact and gravity.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\Bounce.c>Sample\Application\Bounce.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Game Of Life</B>
+      <BR>Game of Life, a cellular automaton devised by the British mathematician John Horton Conway.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_Life.c>Sample\Application\GUI_Life.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Normal Mapping</B>
+      <BR>Normal mapping sample showing a light beam which can be moved by the touch screen.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_NormalMapping_480x272>Sample\Application\GUI_NormalMapping_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_NormalMapping_800x480>Sample\Application\GUI_NormalMapping_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Mandelbrot Demo</B>
+      <BR>Fractal demo based on the Mandelbrot algorithm which allows deep zooming operations.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\MandelbrotDemo>Sample\Application\MandelbrotDemo\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Movie Player</B>
+      <BR>Ready to use player for emWin Movie Files containing a small explorer which can be used either on the PC or directly on the target hardware if emWin is available.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\MoviePlayer>Sample\Application\MoviePlayer\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Product Show</B>
+      <BR>Shows the process of brewing by an animated scheme.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\ProductShow_800x480>Sample\Application\ProductShow_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Space Evader</B>
+      <BR>Small retro game which controls a spaceship through a field of asteroids.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\SpaceEvader_128x128>Sample\Application\SpaceEvader_128x128\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Swipelist product show</B>
+      <BR>Shows a list of products using the SWIPELIST widget and the animation object.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\SwipelistDemo_480x272>Sample\Application\SwipelistDemo_480x272\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Temperature Control</B>
+      <BR>Shows a temperature control GUI with a rotatable device for setting temperatures for different rooms.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\TemperatureControl_480x272>Sample\Application\TemperatureControl_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\TemperatureControl_800x480>Sample\Application\TemperatureControl_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Washing Machine</B>
+      <BR>Shows a washing machine interface demo with.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WashingMachine_480x272>Sample\Application\WashingMachine_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WashingMachine_800x480>Sample\Application\WashingMachine_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Weather Forecast</B>
+      <BR>MultiLayer application shows how sliding of pictures and animated objects could be achieved.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_480x272>Sample\Application\WeatherForecast_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_480x272_SingleLayer>Sample\Application\WeatherForecast_480x272_SingleLayer\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_640x480>Sample\Application\WeatherForecast_640x480\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_800x480>Sample\Application\WeatherForecast_800x480\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_800x480_SingleLayer>Sample\Application\WeatherForecast_800x480_SingleLayer\*.*</a></font></td>
+    </tr>
+  </table>
+  <br>
+  Feel free to use this sample code in your application.<br>
+  <br>
+<hr>
+
+<br>
+Copyright 2024 SEGGER Microcontroller GmbH. All rights reserved.<br>
+For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+</font>
+
+</body>
+</html>
