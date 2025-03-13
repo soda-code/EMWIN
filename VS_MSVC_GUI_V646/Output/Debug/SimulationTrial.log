@@ -1,0 +1,37 @@
+﻿  BackgroundWindow_480x272.c
+  Background_480x272.c
+  Icon_embOS_64x64.c
+  Icon_emCompress_64x64.c
+  Icon_emCrypt_64x64.c
+  Icon_emFile_64x64.c
+  Icon_emFTP_64x64.c
+  Icon_emLib_64x64.c
+  Icon_emLoad_64x64.c
+  Icon_emModbus_64x64.c
+  Icon_emMQTT_64x64.c
+  Icon_emNet_64x64.c
+  Icon_emPack_64x64.c
+  Icon_emSecure_64x64.c
+  Icon_emSSH_64x64.c
+  Icon_emSSL_64x64.c
+  Icon_emUSBD_64x64.c
+  Icon_emUSBH_64x64.c
+  Icon_emWeb_64x64.c
+  Icon_emWin_64x64.c
+  正在生成代码...
+  正在编译...
+  Icon_ES_64x64.c
+  Icon_Flasher_64x64.c
+  Icon_IoT_64x64.c
+  Icon_JLink_64x64.c
+  Icon_Ozone_64x64.c
+  Icon_SysView_64x64.c
+  Separator_218x21.c
+  SWIPELIST_Demo.c
+  GUIConf.c
+  LCDConf.c
+C:\Users\Administrator\Desktop\SeggerEval_WIN32_MSVC_GUI_V646\Application\SWIPELIST_Demo.c(746,11): warning C4101: “i”: 未引用的局部变量
+  SIMConf.c
+  WinMain.c
+  正在生成代码...
+  SimulationTrial.vcxproj -> C:\Users\Administrator\Desktop\SeggerEval_WIN32_MSVC_GUI_V646\Exe\GUISimulationDebug.exe
